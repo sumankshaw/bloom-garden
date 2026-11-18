@@ -1,0 +1,599 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+/*    font-family: 'Segoe UI', sans-serif;*/
+/*    min-height: 100vh;*/
+/*    background: linear-gradient(135deg, #ffe0ec, #fff4d6, #e3f7e8);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.container {*/
+/*    width: 100%;*/
+/*    max-width: 650px;*/
+/*    padding: 40px 20px;*/
+/*    background: rgba(255, 255, 255, 0.75);*/
+/*    border-radius: 25px;*/
+/*    box-shadow: 0 10px 35px rgba(150, 90, 110, 0.15);*/
+/*}*/
+
+/*.flower-icon {*/
+/*    font-size: 75px;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*h1 {*/
+/*    color: #c64c78;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*p {*/
+/*    color: #76566a;*/
+/*    font-size: 17px;*/
+/*    line-height: 1.7;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*button {*/
+/*    margin-top: 20px;*/
+/*    padding: 14px 25px;*/
+/*    border: none;*/
+/*    border-radius: 30px;*/
+/*    background: #e76d9a;*/
+/*    color: white;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s;*/
+/*}*/
+
+/*button:hover {*/
+/*    background: #c64c78;*/
+/*    transform: translateY(-3px);*/
+/*}*/
+
+/*.hidden {*/
+/*    display: none;*/
+/*}*/
+
+/*.subtitle {*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.flowers {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-wrap: wrap;*/
+/*    gap: 22px;*/
+/*    margin: 30px 0;*/
+/*}*/
+
+/*.flower {*/
+/*    font-size: 55px;*/
+/*    cursor: pointer;*/
+/*    transition: transform 0.3s;*/
+/*}*/
+
+/*.flower:hover {*/
+/*    transform: scale(1.35) rotate(10deg);*/
+/*}*/
+
+/*.message {*/
+/*    min-height: 65px;*/
+/*    padding: 18px;*/
+/*    background: #fff0f5;*/
+/*    color: #b34b75;*/
+/*    border-radius: 15px;*/
+/*    font-size: 17px;*/
+/*    margin: 20px 0;*/
+/*}*/
+
+/*.big-flower {*/
+/*    font-size: 90px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*@media (max-width: 480px) {*/
+/*    .container {*/
+/*        padding: 30px 15px;*/
+/*    }*/
+
+/*    h1 {*/
+/*        font-size: 25px;*/
+/*    }*/
+
+/*    .flower {*/
+/*        font-size: 43px;*/
+/*    }*/
+
+/*    p {*/
+/*        font-size: 15px;*/
+/*    }*/
+/*}*/
+/*==================================================================================================================*/
+
+/* =========================
+   BLOOM GARDEN - SNEHAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #fff0f5, transparent 40%),
+        linear-gradient(135deg, #ffe2ed, #fff4e8, #e7f7eb);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Main container */
+
+.container {
+    width: 100%;
+    max-width: 720px;
+    min-height: 530px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 60px rgba(175, 95, 130, 0.15);
+
+    padding: 45px 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* Screens */
+
+.screen {
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Typography */
+
+h1 {
+    color: #c44f7a;
+    font-size: clamp(27px, 5vw, 40px);
+    margin: 12px 0;
+}
+
+h1 span {
+    display: inline-block;
+}
+
+p {
+    color: #79596a;
+    line-height: 1.8;
+}
+
+.small-heading {
+    color: #d17b9c;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Welcome screen */
+
+.welcome-flower {
+    font-size: 85px;
+    margin-bottom: 10px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.intro {
+    max-width: 420px;
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+.question {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+/* Buttons */
+
+button {
+    font-family: inherit;
+}
+
+.welcome button,
+.final button,
+.surprise-button {
+    border: none;
+    border-radius: 40px;
+
+    background: linear-gradient(135deg, #e779a0, #d95787);
+
+    color: white;
+    padding: 15px 28px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    margin-top: 25px;
+
+    box-shadow: 0 8px 20px rgba(210, 91, 140, 0.2);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(210, 91, 140, 0.3);
+}
+
+button:focus-visible {
+    outline: 3px solid #a83c6c;
+    outline-offset: 4px;
+}
+
+/* Footer */
+
+.footer-note {
+    margin-top: 35px;
+    font-size: 12px;
+    color: #b18a9a;
+}
+
+/* Garden */
+
+.subtitle {
+    font-size: 15px;
+    margin: 8px 0 25px;
+}
+
+.garden-scene {
+    background: linear-gradient(180deg, #fff4f8, #f0f9eb);
+
+    border-radius: 25px;
+    min-height: 210px;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 35px 10px 10px;
+}
+
+.flower-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.flower {
+    background: transparent;
+    border: none;
+
+    font-size: 48px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    animation: flowerMove 3s ease-in-out infinite;
+}
+
+.flower:nth-child(even) {
+    animation-delay: 0.5s;
+}
+
+.flower:hover {
+    transform: scale(1.3) rotate(10deg);
+}
+
+.grass {
+    font-size: 23px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+
+/* Butterflies */
+
+.butterfly {
+    position: absolute;
+    font-size: 25px;
+}
+
+.butterfly-one {
+    top: 20px;
+    left: 12%;
+    animation: butterflyOne 6s ease-in-out infinite;
+}
+
+.butterfly-two {
+    top: 55px;
+    right: 12%;
+    animation: butterflyTwo 7s ease-in-out infinite;
+}
+
+/* Message box */
+
+.message-box {
+    background: #fff0f5;
+    border: 1px solid #f8d4e1;
+
+    border-radius: 18px;
+
+    min-height: 75px;
+    padding: 20px;
+
+    margin-top: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-box p {
+    color: #bd527d;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.hint {
+    font-size: 12px;
+    color: #b18a9a;
+    margin-top: 12px;
+}
+
+/* Final surprise */
+
+.bouquet {
+    font-size: 100px;
+    margin-bottom: 15px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.final-message {
+    max-width: 450px;
+    margin: 15px auto;
+    font-size: 16px;
+}
+
+.heart {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+/* Floating background flowers */
+
+.decoration {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-flower {
+    position: absolute;
+    bottom: -50px;
+    font-size: 22px;
+    opacity: 0.45;
+    animation: rise 12s linear infinite;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes flowerMove {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes butterflyOne {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(35px, -15px);
+    }
+}
+
+@keyframes butterflyTwo {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-30px, 15px);
+    }
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.5;
+    }
+
+    85% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile responsive */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 35px 17px;
+        min-height: 500px;
+        border-radius: 23px;
+    }
+
+    .flower {
+        font-size: 39px;
+    }
+
+    .flower-list {
+        gap: 9px;
+    }
+
+    .garden-scene {
+        padding-top: 40px;
+    }
+
+    .message-box p {
+        font-size: 14px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .final-message {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Professional Flower Interaction */
+
+.flower {
+    position: relative;
+    transition: transform 0.4s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.flower:hover {
+    transform: scale(1.25) rotate(12deg);
+    filter: drop-shadow(0 5px 8px rgba(230, 100, 150, 0.3));
+}
+
+.flower.bloom {
+    animation: bloomEffect 0.8s ease;
+}
+
+@keyframes bloomEffect {
+    0% {
+        transform: scale(0.6);
+    }
+
+    50% {
+        transform: scale(1.5) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Sparkle Effect */
+
+.flower.bloom::after {
+    content: "✨";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 18px;
+    animation: sparkle 0.8s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes sparkle {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(0.5);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-25px) scale(1.5);
+    }
+}
+
+/* Smooth message transition */
+
+.message-box {
+    transition: background 0.3s ease;
+}
