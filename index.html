@@ -1,0 +1,223 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+<!--    <title>Bloom Garden | A Little Happiness</title>-->
+
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--    <main class="container">-->
+
+<!--        &lt;!&ndash; Welcome Section &ndash;&gt;-->
+<!--        <section class="welcome" id="welcome">-->
+
+<!--            <div class="flower-icon">🌷</div>-->
+
+<!--            <h1>Hey, Snehal! 🌸</h1>-->
+
+<!--            <p>I made a little garden full of happiness.</p>-->
+<!--            <p>Would you like to see it?</p>-->
+
+<!--            <button onclick="openGarden()">-->
+<!--                Open My Garden 🌸-->
+<!--            </button>-->
+
+<!--        </section>-->
+
+<!--        &lt;!&ndash; Garden Section &ndash;&gt;-->
+<!--        <section class="garden hidden" id="garden">-->
+
+<!--            <h1>Welcome to Bloom Garden 🌼</h1>-->
+
+<!--            <p class="subtitle">-->
+<!--                A little happiness, just for you.-->
+<!--            </p>-->
+
+<!--            <div class="flowers">-->
+
+<!--                <div class="flower" onclick="showMessage(0)">🌻</div>-->
+<!--                <div class="flower" onclick="showMessage(1)">🌷</div>-->
+<!--                <div class="flower" onclick="showMessage(2)">🌸</div>-->
+<!--                <div class="flower" onclick="showMessage(3)">🌼</div>-->
+<!--                <div class="flower" onclick="showMessage(4)">🌹</div>-->
+
+<!--            </div>-->
+
+<!--            <div class="message" id="message">-->
+<!--                Tap any flower to discover a little happiness! 💕-->
+<!--            </div>-->
+
+<!--            <button onclick="finalSurprise()">-->
+<!--                One More Surprise ✨-->
+<!--            </button>-->
+
+<!--        </section>-->
+
+<!--        &lt;!&ndash; Final Surprise &ndash;&gt;-->
+<!--        <section class="final hidden" id="final">-->
+
+<!--            <div class="big-flower">💐</div>-->
+
+<!--            <h1>Keep Smiling!</h1>-->
+
+<!--            <p>-->
+<!--                The world becomes a little more beautiful-->
+<!--                with a smile.-->
+<!--            </p>-->
+
+<!--            <p>Have a wonderful day! 🌷</p>-->
+
+<!--            <button onclick="goBack()">-->
+<!--                Visit Garden Again-->
+<!--            </button>-->
+
+<!--        </section>-->
+
+<!--    </main>-->
+
+<!--    <script src="script.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+<!--==================================================================================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A little digital flower garden made to bring happiness.">
+
+    <title>Bloom Garden | For Snehal 🌸</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating decorations -->
+    <div class="decoration" id="decoration"></div>
+
+    <main class="container">
+
+        <!-- Welcome Screen -->
+        <section class="screen welcome" id="welcome">
+
+            <div class="welcome-flower">🌷</div>
+
+            <p class="small-heading">A LITTLE SOMETHING FOR YOU</p>
+
+            <h1>Hey, Snehal! <span>🌸</span></h1>
+
+            <p class="intro">
+                I made a little garden filled with
+                flowers, colours and happiness.
+            </p>
+
+            <p class="question">
+                Would you like to explore it?
+            </p>
+
+            <button onclick="openGarden()">
+                Enter the Garden <span>🌼</span>
+            </button>
+
+            <p class="footer-note">Made with a little creativity ✨</p>
+
+        </section>
+
+
+        <!-- Garden Screen -->
+        <section class="screen garden hidden" id="garden">
+
+            <p class="small-heading">WELCOME TO YOUR LITTLE WORLD</p>
+
+            <h1>Bloom Garden <span>🌷</span></h1>
+
+            <p class="subtitle">
+                A little flower, a little joy, a lot of smiles.
+            </p>
+
+            <div class="garden-scene">
+
+                <div class="butterfly butterfly-one">🦋</div>
+                <div class="butterfly butterfly-two">🦋</div>
+
+
+                <div class="flower-list">
+
+                    <button class="flower" onclick="showMessage(0, this)">🌻</button>
+
+                    <button class="flower" onclick="showMessage(1, this)">🌷</button>
+
+                    <button class="flower" onclick="showMessage(2, this)">🌸</button>
+
+                    <button class="flower" onclick="showMessage(3, this)">🌼</button>
+
+                    <button class="flower" onclick="showMessage(4, this)">🌹</button>
+
+                    <button class="flower" onclick="showMessage(5, this)">💐</button>
+
+                </div>
+
+
+                <div class="grass">🌿 🌱 🌿 🌱 🌿 🌱 🌿</div>
+
+            </div>
+
+            <div class="message-box" aria-live="polite">
+                <p id="message">
+                    Tap any flower to discover a little happiness! 💕
+                </p>
+            </div>
+
+            <p class="hint">Psst... Try clicking every flower! 😊</p>
+
+            <button class="surprise-button" onclick="finalSurprise()">
+                One More Surprise <span>✨</span>
+            </button>
+
+        </section>
+
+
+        <!-- Final Surprise -->
+        <section class="screen final hidden" id="final">
+
+            <div class="bouquet">💐</div>
+
+            <p class="small-heading">A LITTLE REMINDER</p>
+
+            <h1>Keep Smiling, Snehal! 💗</h1>
+
+            <p class="final-message">
+                Just like flowers make a garden beautiful,
+                a smile can make an ordinary day special.
+            </p>
+
+            <p class="final-message">
+                Hope this little surprise brought a smile
+                to your face!
+            </p>
+
+            <div class="heart">🌸 🦋 🌷</div>
+
+            <button onclick="goBack()">
+                Visit the Garden Again
+            </button>
+
+            <p class="footer-note">Created with creativity & care ❤️</p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
